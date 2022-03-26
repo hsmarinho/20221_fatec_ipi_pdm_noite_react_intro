@@ -1,7 +1,20 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
+import'./styles.css'
 
 const App = () => {
+    const obterTextoDoRotulo = () => "Enviar"
+    const textoDoRotulo = "Nome:"
+    const estilosBotao = {
+        marginTop:12,
+        paddingTop:8,
+        paddingBottom:8,
+        backgroundColor:'blueviolet',
+        color:'white',
+        border:'none',
+        borderRadius:8,
+        width:'100%'
+    }
     return(
         <div style={{margin:'auto',
                     width:768,
@@ -10,11 +23,13 @@ const App = () => {
                     borderRadius:8
                     }}>
                         
-                <label htmlFor="nome" style={{
+                <label className="rotulo" htmlFor="nome" style={{
                     display: 'block',
                     marginBottom:4,
 
-                }}>Nome</label>
+                }}>
+                    {textoDoRotulo}
+                </label>
                 
                 <input id="nome" type="text" style={{
                     paddingTop:8,
@@ -24,16 +39,7 @@ const App = () => {
                     width:'100%'
                 }}/>
 
-                <button style={{
-                    marginTop:12,
-                    paddingTop:8,
-                    paddingBottom:8,
-                    backgroundColor:'blueviolet',
-                    color:'white',
-                    border:'none',
-                    borderRadius:8,
-                    width:'100%'
-                }}>Eviar</button>
+                <button style={estilosBotao}>{obterTextoDoRotulo()}</button>
         </div>
     )
 }
