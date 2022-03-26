@@ -3,8 +3,37 @@ import ReactDOM from 'react-dom'
 
 const App = () => {
     return(
-        <div>
-            Meu componente React
+        <div style={{margin:'auto',
+                    width:768,
+                    backgroundColor:'#EEE',
+                    padding:12,
+                    borderRadius:8
+                    }}>
+                        
+                <label htmlFor="nome" style={{
+                    display: 'block',
+                    marginBottom:4,
+
+                }}>Nome</label>
+                
+                <input id="nome" type="text" style={{
+                    paddingTop:8,
+                    paddingBottom:8,
+                    borderStyle:'hidden',
+                    outline:'none',
+                    width:'100%'
+                }}/>
+
+                <button style={{
+                    marginTop:12,
+                    paddingTop:8,
+                    paddingBottom:8,
+                    backgroundColor:'blueviolet',
+                    color:'white',
+                    border:'none',
+                    borderRadius:8,
+                    width:'100%'
+                }}>Eviar</button>
         </div>
     )
 }
